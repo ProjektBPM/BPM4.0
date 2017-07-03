@@ -1,0 +1,1268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow in_service="true" stopOnError="true" stop="true" instance="0" created="26. 6. 2017 11:32:40" createdby="Jan" lastupdate="3. 7. 2017 11:25:31" lastupdateby="Jan" engine="5.170613.165152" wsdl="" testpage="" iconsize="32" owner="" version="1499073931776" currency="€" timeUnit="h" freeFlow="false" processTitle="Exmatrikulation" showProcessTitle="true">
+  <Metadata/>
+  <ProcessDescription/>
+  <SchemaDeclaration/>
+  <Comment/>
+  <CustomPlaceholders maxAge="-1"/>
+  <Transitions>
+    <Transition SVGid="Element1011" id="1">
+      <From action="0"/>
+      <To action="1"/>
+    </Transition>
+    <Transition SVGid="Element1012" id="2">
+      <From action="15"/>
+      <To action="999"/>
+    </Transition>
+    <Transition SVGid="Element1013" id="3">
+      <From action="1"/>
+      <To action="2"/>
+    </Transition>
+    <Transition SVGid="Element1014" id="4">
+      <From action="2"/>
+      <To action="3"/>
+    </Transition>
+    <Transition SVGid="Element1015" id="5">
+      <From action="3"/>
+      <To action="4" priority="1"/>
+      <To action="6" priority="2"/>
+    </Transition>
+    <Transition SVGid="Element1016" id="6">
+      <From action="4"/>
+      <To action="10" priority="1" probability="0"/>
+      <To action="11" priority="2" probability="0"/>
+    </Transition>
+    <Transition SVGid="Element1017" id="7">
+      <From action="6"/>
+      <To action="7"/>
+    </Transition>
+    <Transition SVGid="Element1018" id="8">
+      <From action="7"/>
+      <To action="8"/>
+    </Transition>
+    <Transition SVGid="Element1019" id="9">
+      <From action="8"/>
+      <To action="9"/>
+    </Transition>
+    <Transition SVGid="Element1306" id="10">
+      <From action="10"/>
+      <To action="11"/>
+    </Transition>
+    <Transition SVGid="Element10110" id="11">
+      <From action="11"/>
+      <To action="16"/>
+    </Transition>
+    <Transition id="12" SVGid="Element10111">
+      <To action="12">
+        <Port id="1">9</Port>
+        <Port id="2">16</Port>
+      </To>
+      <From action="9"/>
+      <From action="16"/>
+    </Transition>
+    <Transition SVGid="Element10112" id="13">
+      <From action="12"/>
+      <To action="13"/>
+    </Transition>
+    <Transition SVGid="Element10113" id="14">
+      <From action="13"/>
+      <To action="14"/>
+    </Transition>
+    <Transition SVGid="Element10114" id="15">
+      <From action="14"/>
+      <To action="15"/>
+    </Transition>
+  </Transitions>
+  <Actions>
+    <Action id="0" SVGid="Element0811">
+      <Name>Start</Name>
+      <Comment/>
+      <Module>Start</Module>
+      <Label>Antrag auf Exmatrikulation ist gestellt</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>eventtype</name>
+          <value>bpmevent_general_start</value>
+        </Parameter>
+        <Parameter id="2">
+          <name>quantity</name>
+          <value>0</value>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="1" SVGid="Element0891">
+      <Name>Activity</Name>
+      <Comment/>
+      <Module>iXworkflow</Module>
+      <Label>Antrag auf Exmatrikulation formal prüfen</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>workflow</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>activitytype</name>
+          <value>NONE</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>executiontype</name>
+          <value>SINGLE</value>
+        </Parameter>
+        <Parameter id="4">
+          <name>calculatedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="5">
+          <name>fixedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="6">
+          <name>idlePeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="7">
+          <name>processingTime</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="8">
+          <name>quantity</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="9">
+          <name>waitingPeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="10">
+          <name>adHoc</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="11">
+          <name>compensation</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="12">
+          <name>owner</name>
+          <value/>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="2" SVGid="Element0892">
+      <Name>Activity</Name>
+      <Comment/>
+      <Module>iXworkflow</Module>
+      <Label>Sperre setzen "Ex in Bearbeitung"</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>workflow</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>activitytype</name>
+          <value>NONE</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>executiontype</name>
+          <value>SINGLE</value>
+        </Parameter>
+        <Parameter id="4">
+          <name>calculatedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="5">
+          <name>fixedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="6">
+          <name>idlePeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="7">
+          <name>processingTime</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="8">
+          <name>quantity</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="9">
+          <name>waitingPeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="10">
+          <name>adHoc</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="11">
+          <name>compensation</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="12">
+          <name>owner</name>
+          <value/>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="3" SVGid="Element0893">
+      <Name>Activity</Name>
+      <Comment/>
+      <Module>iXworkflow</Module>
+      <Label>Auf offene Prüfungsverfahren prüfen</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>workflow</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>activitytype</name>
+          <value>NONE</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>executiontype</name>
+          <value>SINGLE</value>
+        </Parameter>
+        <Parameter id="4">
+          <name>calculatedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="5">
+          <name>fixedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="6">
+          <name>idlePeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="7">
+          <name>processingTime</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="8">
+          <name>quantity</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="9">
+          <name>waitingPeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="10">
+          <name>adHoc</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="11">
+          <name>compensation</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="12">
+          <name>owner</name>
+          <value/>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="4" SVGid="Element0894">
+      <Name>Activity</Name>
+      <Comment/>
+      <Module>iXworkflow</Module>
+      <Label>ggf. Entscheidung über Beendigung Prüfungsverfahren treffen</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>workflow</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>activitytype</name>
+          <value>NONE</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>executiontype</name>
+          <value>SINGLE</value>
+        </Parameter>
+        <Parameter id="4">
+          <name>calculatedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="5">
+          <name>fixedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="6">
+          <name>idlePeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="7">
+          <name>processingTime</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="8">
+          <name>quantity</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="9">
+          <name>waitingPeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="10">
+          <name>adHoc</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="11">
+          <name>compensation</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="12">
+          <name>owner</name>
+          <value/>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="6" SVGid="Element0895">
+      <Name>Activity</Name>
+      <Comment/>
+      <Module>iXworkflow</Module>
+      <Label>Bescheid "Exmatrikulation auf Antrag erstellen"</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>workflow</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>activitytype</name>
+          <value>NONE</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>executiontype</name>
+          <value>SINGLE</value>
+        </Parameter>
+        <Parameter id="4">
+          <name>calculatedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="5">
+          <name>fixedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="6">
+          <name>idlePeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="7">
+          <name>processingTime</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="8">
+          <name>quantity</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="9">
+          <name>waitingPeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="10">
+          <name>adHoc</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="11">
+          <name>compensation</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="12">
+          <name>owner</name>
+          <value/>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="7" SVGid="Element0896">
+      <Name>Activity</Name>
+      <Comment/>
+      <Module>iXworkflow</Module>
+      <Label>Bescheinigung zur Vorlage bei der Ausbildungsstätte ggf. unterzeichnen</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>workflow</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>activitytype</name>
+          <value>NONE</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>executiontype</name>
+          <value>SINGLE</value>
+        </Parameter>
+        <Parameter id="4">
+          <name>calculatedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="5">
+          <name>fixedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="6">
+          <name>idlePeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="7">
+          <name>processingTime</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="8">
+          <name>quantity</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="9">
+          <name>waitingPeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="10">
+          <name>adHoc</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="11">
+          <name>compensation</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="12">
+          <name>owner</name>
+          <value/>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="8" SVGid="Element0897">
+      <Name>Activity</Name>
+      <Comment/>
+      <Module>iXworkflow</Module>
+      <Label>Exmatrikulationsbescheid unterzeichnen</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>workflow</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>activitytype</name>
+          <value>NONE</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>executiontype</name>
+          <value>SINGLE</value>
+        </Parameter>
+        <Parameter id="4">
+          <name>calculatedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="5">
+          <name>fixedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="6">
+          <name>idlePeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="7">
+          <name>processingTime</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="8">
+          <name>quantity</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="9">
+          <name>waitingPeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="10">
+          <name>adHoc</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="11">
+          <name>compensation</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="12">
+          <name>owner</name>
+          <value/>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="9" SVGid="Element0898">
+      <Name>Activity</Name>
+      <Comment/>
+      <Module>iXworkflow</Module>
+      <Label>Exmatrikulationsbescheid und Bescheinigung zur Vorlage bei der Ausbildungsstätte an Studierenden versenden</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>workflow</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>activitytype</name>
+          <value>NONE</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>executiontype</name>
+          <value>SINGLE</value>
+        </Parameter>
+        <Parameter id="4">
+          <name>calculatedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="5">
+          <name>fixedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="6">
+          <name>idlePeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="7">
+          <name>processingTime</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="8">
+          <name>quantity</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="9">
+          <name>waitingPeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="10">
+          <name>adHoc</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="11">
+          <name>compensation</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="12">
+          <name>owner</name>
+          <value/>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="10" SVGid="Element0899">
+      <Name>Activity</Name>
+      <Comment/>
+      <Module>iXworkflow</Module>
+      <Label>Beendigung offener Prüfungsverfahren</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>workflow</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>activitytype</name>
+          <value>NONE</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>executiontype</name>
+          <value>SINGLE</value>
+        </Parameter>
+        <Parameter id="4">
+          <name>calculatedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="5">
+          <name>fixedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="6">
+          <name>idlePeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="7">
+          <name>processingTime</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="8">
+          <name>quantity</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="9">
+          <name>waitingPeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="10">
+          <name>adHoc</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="11">
+          <name>compensation</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="12">
+          <name>owner</name>
+          <value/>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="11" SVGid="Element8881">
+      <Name>XORJOIN</Name>
+      <Comment/>
+      <Module>dummy</Module>
+      <Label/>
+      <Parameters/>
+    </Action>
+    <Action id="12" SVGid="Element08910">
+      <Name>Activity</Name>
+      <Comment/>
+      <Module>iXworkflow</Module>
+      <Label>Abschließende Notenbescheinigung erstellen</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>workflow</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>activitytype</name>
+          <value>NONE</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>executiontype</name>
+          <value>SINGLE</value>
+        </Parameter>
+        <Parameter id="4">
+          <name>calculatedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="5">
+          <name>fixedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="6">
+          <name>idlePeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="7">
+          <name>processingTime</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="8">
+          <name>quantity</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="9">
+          <name>waitingPeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="10">
+          <name>adHoc</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="11">
+          <name>compensation</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="12">
+          <name>owner</name>
+          <value/>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="13" SVGid="Element08911">
+      <Name>Activity</Name>
+      <Comment/>
+      <Module>iXworkflow</Module>
+      <Label>Notenbescheinigung unterzeichnen</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>workflow</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>activitytype</name>
+          <value>NONE</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>executiontype</name>
+          <value>SINGLE</value>
+        </Parameter>
+        <Parameter id="4">
+          <name>calculatedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="5">
+          <name>fixedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="6">
+          <name>idlePeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="7">
+          <name>processingTime</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="8">
+          <name>quantity</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="9">
+          <name>waitingPeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="10">
+          <name>adHoc</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="11">
+          <name>compensation</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="12">
+          <name>owner</name>
+          <value/>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="14" SVGid="Element08912">
+      <Name>Activity</Name>
+      <Comment/>
+      <Module>iXworkflow</Module>
+      <Label>Vollständige Entlastung überprüfen</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>workflow</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>activitytype</name>
+          <value>NONE</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>executiontype</name>
+          <value>SINGLE</value>
+        </Parameter>
+        <Parameter id="4">
+          <name>calculatedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="5">
+          <name>fixedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="6">
+          <name>idlePeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="7">
+          <name>processingTime</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="8">
+          <name>quantity</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="9">
+          <name>waitingPeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="10">
+          <name>adHoc</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="11">
+          <name>compensation</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="12">
+          <name>owner</name>
+          <value/>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="15" SVGid="Element08913">
+      <Name>Activity</Name>
+      <Comment/>
+      <Module>iXworkflow</Module>
+      <Label>Notenbescheinigung und Exmatrikulationsbescheinigung versenden</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>workflow</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>activitytype</name>
+          <value>NONE</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>executiontype</name>
+          <value>SINGLE</value>
+        </Parameter>
+        <Parameter id="4">
+          <name>calculatedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="5">
+          <name>fixedCosts</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="6">
+          <name>idlePeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="7">
+          <name>processingTime</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="8">
+          <name>quantity</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="9">
+          <name>waitingPeriod</name>
+          <value>0</value>
+        </Parameter>
+        <Parameter id="10">
+          <name>adHoc</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="11">
+          <name>compensation</name>
+          <value>false</value>
+        </Parameter>
+        <Parameter id="12">
+          <name>owner</name>
+          <value/>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="16" SVGid="ConnectionComponent1">
+      <Name>Connection</Name>
+      <Comment/>
+      <Module>dummy</Module>
+      <Label/>
+      <Parameters/>
+    </Action>
+    <Action id="5" SVGid="Element0031">
+      <Name>Data Object</Name>
+      <Comment/>
+      <Module>iXxml</Module>
+      <Label>Antrag Exmatrikulation</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>file_name</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>action</name>
+          <value>read</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>binary</name>
+          <value>true</value>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="17" SVGid="Element0032">
+      <Name>Data Object</Name>
+      <Comment/>
+      <Module>iXxml</Module>
+      <Label>Exmatrikulationsbescheinigung</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>file_name</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>action</name>
+          <value>read</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>binary</name>
+          <value>true</value>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="18" SVGid="Element0033">
+      <Name>Data Object</Name>
+      <Comment/>
+      <Module>iXxml</Module>
+      <Label>Exmatrikulationsbescheinigung</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>file_name</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>action</name>
+          <value>read</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>binary</name>
+          <value>true</value>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="19" SVGid="Element0034">
+      <Name>Data Object</Name>
+      <Comment/>
+      <Module>iXxml</Module>
+      <Label>Exmatrikulationsbescheinigung</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>file_name</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>action</name>
+          <value>read</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>binary</name>
+          <value>true</value>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="20" SVGid="Element0035">
+      <Name>Data Object</Name>
+      <Comment/>
+      <Module>iXxml</Module>
+      <Label>Notenbescheinigung</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>file_name</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>action</name>
+          <value>read</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>binary</name>
+          <value>true</value>
+        </Parameter>
+      </Parameters>
+    </Action>
+    <Action id="21" SVGid="Element0036">
+      <Name>Data Object</Name>
+      <Comment/>
+      <Module>iXxml</Module>
+      <Label>Notenbescheinigung</Label>
+      <Parameters>
+        <Parameter id="1">
+          <name>file_name</name>
+          <value/>
+        </Parameter>
+        <Parameter id="2">
+          <name>action</name>
+          <value>read</value>
+        </Parameter>
+        <Parameter id="3">
+          <name>binary</name>
+          <value>true</value>
+        </Parameter>
+      </Parameters>
+    </Action>
+  </Actions>
+  <Breakpoints/>
+  <Scheduler>
+    <ScheduledTime/>
+    <Range/>
+    <Recurrence/>
+  </Scheduler>
+  <Graphics>
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2391" height="1086">
+      <defs>
+        <marker id="Triangle" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="strokeWidth" markerWidth="4" markerHeight="3" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 z"/>
+        </marker>
+      </defs>
+      <g id="pool0" Comment="">
+        <rect id="pool0OuterRect" x="62" y="203" width="2326" height="172" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1"/>
+        <rect id="pool0InnerRect" x="62" y="203" width="24" height="172" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1"/>
+        <text id="pool0Text" x="78" y="323" transform="rotate(270 78 323)" fill="rgb(0,0,0)" font-family="Tahoma" font-size="10">Studierende</text>
+      </g>
+      <g id="pool1" Comment="">
+        <rect id="pool1OuterRect" x="63" y="383" width="2320" height="250" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1"/>
+        <rect id="pool1InnerRect" x="63" y="383" width="24" height="250" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1"/>
+        <text id="pool1Text" x="79" y="598" transform="rotate(270 79 598)" fill="rgb(0,0,0)" font-family="Tahoma" font-size="10">Studienlifecycle-Sachbearbeiter</text>
+      </g>
+      <g id="pool2" Comment="">
+        <rect id="pool2OuterRect" x="65" y="636" width="2320" height="184" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1"/>
+        <rect id="pool2InnerRect" x="65" y="636" width="24" height="184" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1"/>
+        <text id="pool2Text" x="81" y="746" transform="rotate(270 81 746)" fill="rgb(0,0,0)" font-family="Tahoma" font-size="10">Rektor</text>
+      </g>
+      <g id="pool3" Comment="">
+        <rect id="pool3OuterRect" x="62" y="827" width="2328" height="258" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1"/>
+        <rect id="pool3InnerRect" x="62" y="827" width="24" height="258" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1"/>
+        <text id="pool3Text" x="78" y="1013" transform="rotate(270 78 1013)" fill="rgb(0,0,0)" font-family="Tahoma" font-size="10">Studiengangsleitung</text>
+      </g>
+      <g id="Element1011" fill="none" Comment="">
+        <polyline points="168,253 168,354 168,354 168,458 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element0811" from-point="4" join-to="Element0891" to-point="4"/>
+        <text id="Label1011" x="168" y="367" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element1012" fill="none" Comment="">
+        <polyline points="2139,491 2174,491 2174,491 2209,491 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element08913" from-point="4" join-to="Element0851" to-point="4"/>
+        <text id="Label1012" x="2174" y="504" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element1013" fill="none" Comment="">
+        <polyline points="235,491 260,491 260,491 288,491 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element0891" from-point="4" join-to="Element0892" to-point="4"/>
+        <text id="Label1013" x="260" y="504" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element1014" fill="none" Comment="">
+        <polyline points="422,491 448,491 448,491 475,491 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element0892" from-point="4" join-to="Element0893" to-point="4"/>
+        <text id="Label1014" x="448" y="504" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element1015" fill="none" Comment="">
+        <polyline points="609,491 634,491 634,491 662,491 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element0893" from-point="4" join-to="Element0231" to-point="4"/>
+        <text id="Label1015" x="634" y="504" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element1301" fill="none" Comment="">
+        <polyline points="678,475 678,380 678,380 678,287 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element0231" from-point="4" join-to="Element0894" to-point="4"/>
+        <text id="Label1301" x="672" y="393" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+        <text id="Label1301*" x="672" y="393" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7">[1]</text>
+      </g>
+      <g id="Element1302" fill="none" Comment="">
+        <polyline points="695,491 814,491 814,491 934,491 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element0231" from-point="4" join-to="Element0895" to-point="4"/>
+        <text id="Label1302" x="808" y="504" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+        <text id="Label1302*" x="808" y="504" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7">[2]</text>
+      </g>
+      <g id="Element1016" fill="none" Comment="">
+        <polyline points="745,253 1042,253 1042,253 1342,253 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element0894" from-point="4" join-to="Element0271" to-point="4"/>
+        <text id="Label1016" x="1042" y="266" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element1017" fill="none" Comment="">
+        <polyline points="1001,525 1001,704 1001,704 1001,883 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element0895" from-point="4" join-to="Element0896" to-point="4"/>
+        <text id="Label1017" x="1001" y="717" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element1018" fill="none" Comment="">
+        <polyline points="1001,883 1001,796 1188,796 1188,712 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element0896" from-point="4" join-to="Element0897" to-point="4"/>
+        <text id="Label1018" x="1094" y="809" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element1019" fill="none" Comment="">
+        <polyline points="1188,645 1188,584 1188,584 1188,525 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element0897" from-point="4" join-to="Element0898" to-point="4"/>
+        <text id="Label1019" x="1188" y="597" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element1303" fill="none" Comment="">
+        <polyline points="1255,491 1400,491 1400,559 1546,559 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element0898" from-point="4" join-to="Element0241" to-point="4"/>
+        <text id="Label1303" x="1394" y="538" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+        <text id="Label1303*" x="1394" y="538" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7">[1]</text>
+      </g>
+      <g id="Element1304" fill="none" Comment="">
+        <polyline points="1375,253 1486,253 1486,253 1597,253 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element0271" from-point="4" join-to="Element0899" conditions="&lt;Conditions&gt;&lt;complex&gt;&lt;placeholder/&gt;&lt;/complex&gt;&lt;/Conditions&gt;" to-point="4"/>
+        <text id="Label1304" x="1470" y="266" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7">nein</text>
+        <text id="Label1304*" x="1470" y="266" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7">[1] (0%)</text>
+      </g>
+      <g id="Element1305" fill="none" Comment="">
+        <polyline points="1375,253 1460,253 1460,423 1546,423 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element0271" from-point="4" join-to="Element8881" conditions="&lt;Conditions&gt;&lt;complex&gt;&lt;placeholder/&gt;&lt;/complex&gt;&lt;/Conditions&gt;" to-point="4"/>
+        <text id="Label1305" x="1449" y="351" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7">ja</text>
+        <text id="Label1305*" x="1449" y="351" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7">[2] (0%)</text>
+      </g>
+      <g id="Element1306" fill="none" Comment="">
+        <polyline points="1664,287 1664,346 1562,346 1562,407 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element0899" from-point="4" join-to="Element8881" to-point="4"/>
+        <text id="Label1306" x="1607" y="359" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+        <text id="Label1306*" x="1607" y="359" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7">[1]</text>
+      </g>
+      <g id="Element10110" fill="none" Comment="">
+        <polyline points="1562,440 1562,456 1562,456 1562,475 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element8881" from-point="4" join-to="ConnectionComponent1" to-point="4"/>
+        <text id="Label10110" x="1562" y="469" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element10111" fill="none" Comment="">
+        <polyline points="1579,559 1622,559 1622,491 1665,491 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element0241" from-point="4" join-to="Element08910" to-point="4"/>
+        <text id="Label10111" x="1622" y="538" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element1307" fill="none" Comment="">
+        <polyline points="1562,508 1562,524 1562,524 1562,543 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="ConnectionComponent1" from-point="4" join-to="Element0241" to-point="4"/>
+        <text id="Label1307" x="1556" y="537" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+        <text id="Label1307*" x="1556" y="537" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7">[2]</text>
+      </g>
+      <g id="Element10112" fill="none" Comment="">
+        <polyline points="1732,525 1732,706 1732,706 1732,883 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element08910" from-point="4" join-to="Element08911" to-point="4"/>
+        <text id="Label10112" x="1732" y="719" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element10113" fill="none" Comment="">
+        <polyline points="1732,883 1732,702 1885,702 1885,525 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element08911" from-point="4" join-to="Element08912" to-point="4"/>
+        <text id="Label10113" x="1808" y="715" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element10114" fill="none" Comment="">
+        <polyline points="1952,491 1978,491 1978,491 2005,491 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-end="url(#Triangle)" join-from="Element08912" from-point="4" join-to="Element08913" to-point="4"/>
+        <text id="Label10114" x="1978" y="504" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element0811" fill="none">
+        <image x="153" y="221" width="32" height="32" xlink:href="881_BPM_General_Start.png" async="false"/>
+        <text id="Label0811" x="169" y="260" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Antrag auf Exmatrikulation ist gestellt</text>
+        <text id="Label0811*" x="169" y="260" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element0851" fill="none" eventtype="bpmevent_general_end" Comment="">
+        <image x="2210" y="476" width="32" height="32" xlink:href="985_BPM_General_End.png" async="false"/>
+        <text id="Label0851" x="2226" y="515" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Studierender ist exmatrikuliert</text>
+        <text id="Label0851*" x="2226" y="515" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element0891" fill="none">
+        <image x="102" y="459" width="128" height="64" xlink:href="800_BPM_Activity.png" async="false"/>
+        <text id="Label0891" x="168" y="475" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Antrag auf Exmatrikulation formal prüfen</text>
+        <text id="Label0891*" x="168" y="475" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element0892" fill="none">
+        <image x="289" y="459" width="128" height="64" xlink:href="800_BPM_Activity.png" async="false"/>
+        <text id="Label0892" x="355" y="475" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Sperre setzen "Ex in Bearbeitung"</text>
+        <text id="Label0892*" x="355" y="475" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element0893" fill="none">
+        <image x="476" y="459" width="128" height="64" xlink:href="800_BPM_Activity.png" async="false"/>
+        <text id="Label0893" x="542" y="475" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Auf offene Prüfungsverfahren prüfen</text>
+        <text id="Label0893*" x="542" y="475" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element0231" fill="none" Comment="">
+        <image x="663" y="476" width="32" height="32" xlink:href="823_BPM_AND_FORK.png"/>
+        <text id="Label0231" x="679" y="515" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8"/>
+      </g>
+      <g id="Element0894" fill="none">
+        <image x="612" y="221" width="128" height="64" xlink:href="800_BPM_Activity.png" async="false"/>
+        <text id="Label0894" x="678" y="237" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">ggf. Entscheidung über Beendigung Prüfungsverfahren treffen</text>
+        <text id="Label0894*" x="678" y="237" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element0895" fill="none">
+        <image x="935" y="459" width="128" height="64" xlink:href="800_BPM_Activity.png" async="false"/>
+        <text id="Label0895" x="1001" y="475" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Bescheid "Exmatrikulation auf Antrag erstellen"</text>
+        <text id="Label0895*" x="1001" y="475" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element0896" fill="none">
+        <image x="935" y="884" width="128" height="64" xlink:href="800_BPM_Activity.png" async="false"/>
+        <text id="Label0896" x="1001" y="900" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Bescheinigung zur Vorlage bei der Ausbildungsstätte ggf. unterzeichnen</text>
+        <text id="Label0896*" x="1001" y="900" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element0897" fill="none">
+        <image x="1122" y="646" width="128" height="64" xlink:href="800_BPM_Activity.png" async="false"/>
+        <text id="Label0897" x="1188" y="662" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Exmatrikulationsbescheid unterzeichnen</text>
+        <text id="Label0897*" x="1188" y="662" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element0898" fill="none">
+        <image x="1122" y="459" width="128" height="64" xlink:href="800_BPM_Activity.png" async="false"/>
+        <text id="Label0898" x="1188" y="475" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Exmatrikulationsbescheid und Bescheinigung zur Vorlage bei der Ausbildungsstätte an Studierenden versenden</text>
+        <text id="Label0898*" x="1188" y="475" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element0271" fill="none" Comment="">
+        <image x="1343" y="238" width="32" height="32" xlink:href="827_BPM_XOR_FORK.png"/>
+        <text id="Label0271" x="1359" y="277" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Möchte Studierender darauf verzichten offene Prüfungsverfahren zu beenden?</text>
+      </g>
+      <g id="Element0899" fill="none">
+        <image x="1598" y="221" width="128" height="64" xlink:href="800_BPM_Activity.png" async="false"/>
+        <text id="Label0899" x="1664" y="237" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Beendigung offener Prüfungsverfahren</text>
+        <text id="Label0899*" x="1664" y="237" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element8881" fill="none">
+        <image x="1547" y="408" width="32" height="32" xlink:href="828_BPM_XOR_JOIN.png" async="false"/>
+        <text id="Label8881" x="1563" y="447" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8"/>
+        <text id="Label8881*" x="1563" y="447" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element0241" fill="none" Comment="">
+        <image x="1547" y="544" width="32" height="32" xlink:href="824_BPM_AND_JOIN.png"/>
+        <text id="Label0241" x="1563" y="583" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8"/>
+      </g>
+      <g id="Element08910" fill="none">
+        <image x="1666" y="459" width="128" height="64" xlink:href="800_BPM_Activity.png" async="false"/>
+        <text id="Label08910" x="1732" y="475" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Abschließende Notenbescheinigung erstellen</text>
+        <text id="Label08910*" x="1732" y="475" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element08911" fill="none">
+        <image x="1666" y="884" width="128" height="64" xlink:href="800_BPM_Activity.png" async="false"/>
+        <text id="Label08911" x="1732" y="900" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Notenbescheinigung unterzeichnen</text>
+        <text id="Label08911*" x="1732" y="900" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element08912" fill="none">
+        <image x="1819" y="459" width="128" height="64" xlink:href="800_BPM_Activity.png" async="false"/>
+        <text id="Label08912" x="1885" y="475" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Vollständige Entlastung überprüfen</text>
+        <text id="Label08912*" x="1885" y="475" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element08913" fill="none">
+        <image x="2006" y="459" width="128" height="64" xlink:href="800_BPM_Activity.png" async="false"/>
+        <text id="Label08913" x="2072" y="475" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Notenbescheinigung und Exmatrikulationsbescheinigung versenden</text>
+        <text id="Label08913*" x="2072" y="475" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="ConnectionComponent1" fill="none">
+        <image x="1547" y="476" width="32" height="32" xlink:href="connection.png" async="false"/>
+        <text id="ConnectionComponent1" x="1563" y="515" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8"/>
+        <text id="ConnectionComponent1*" x="1563" y="515" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element0031" fill="none">
+        <image x="153" y="561" width="32" height="32" xlink:href="003_BPM_DataObject.png" async="false"/>
+        <text id="Label0031" x="169" y="600" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Antrag Exmatrikulation</text>
+        <text id="Label0031*" x="169" y="600" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element0032" fill="none">
+        <image x="884" y="544" width="32" height="32" xlink:href="003_BPM_DataObject.png" async="false"/>
+        <text id="Label0032" x="900" y="583" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Exmatrikulationsbescheinigung</text>
+        <text id="Label0032*" x="900" y="583" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element0033" fill="none">
+        <image x="986" y="1003" width="32" height="32" xlink:href="003_BPM_DataObject.png" async="false"/>
+        <text id="Label0033" x="1002" y="1042" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Exmatrikulationsbescheinigung</text>
+        <text id="Label0033*" x="1002" y="1042" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element0034" fill="none">
+        <image x="1224" y="731" width="32" height="32" xlink:href="003_BPM_DataObject.png" async="false"/>
+        <text id="Label0034" x="1240" y="770" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Exmatrikulationsbescheinigung</text>
+        <text id="Label0034*" x="1240" y="770" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element0035" fill="none">
+        <image x="1666" y="561" width="32" height="32" xlink:href="003_BPM_DataObject.png" async="false"/>
+        <text id="Label0035" x="1682" y="600" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Notenbescheinigung</text>
+        <text id="Label0035*" x="1682" y="600" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element0036" fill="none">
+        <image x="1717" y="1003" width="32" height="32" xlink:href="003_BPM_DataObject.png" async="false"/>
+        <text id="Label0036" x="1733" y="1042" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8">Notenbescheinigung</text>
+        <text id="Label0036*" x="1733" y="1042" text-anchor="middle" fill="rgb(0,0,0)" font-family="Tahoma" font-size="8" visibility="hidden"/>
+      </g>
+      <g id="Element1041" fill="none" Comment="" routing="Straight">
+        <polyline points="168,560 168,525 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-start="Circle" marker-end="Empty arrow" stroke-dasharray="2, 1 " join-from="Element0031" from-point="4" join-to="Element0891" to-point="4"/>
+        <text id="Label1041" x="168" y="542" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element1042" fill="none" Comment="" routing="Straight">
+        <polyline points="1001,525 916,559 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-start="Circle" marker-end="Empty arrow" stroke-dasharray="2, 1 " join-from="Element0895" from-point="4" join-to="Element0032" to-point="4"/>
+        <text id="Label1042" x="958" y="542" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element1043" fill="none" Comment="" routing="Straight">
+        <polyline points="1001,950 1001,1002 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-start="Circle" marker-end="Empty arrow" stroke-dasharray="2, 1 " join-from="Element0896" from-point="4" join-to="Element0033" to-point="4"/>
+        <text id="Label1043" x="1001" y="976" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element1044" fill="none" Comment="" routing="Straight">
+        <polyline points="1188,712 1239,730 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-start="Circle" marker-end="Empty arrow" stroke-dasharray="2, 1 " join-from="Element0897" from-point="4" join-to="Element0034" to-point="4"/>
+        <text id="Label1044" x="1213" y="721" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element1045" fill="none" Comment="" routing="Straight">
+        <polyline points="1732,525 1681,560 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-start="Circle" marker-end="Empty arrow" stroke-dasharray="2, 1 " join-from="Element08910" from-point="4" join-to="Element0035" to-point="4"/>
+        <text id="Label1045" x="1706" y="542" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+      <g id="Element1046" fill="none" Comment="" routing="Straight">
+        <polyline points="1732,950 1732,1002 " fill="none" stroke="rgb(0,0,0)" stroke-width="1" marker-start="Circle" marker-end="Empty arrow" stroke-dasharray="2, 1 " join-from="Element08911" from-point="4" join-to="Element0036" to-point="4"/>
+        <text id="Label1046" x="1732" y="976" fill="rgb(0,0,0)" font-family="Microsoft Sans Serif" font-size="7"/>
+      </g>
+    </svg>
+    <png width="2393" height="1088" x-offset="4" y-offset="4">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AAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAAAAAgTLJAAAAAAAAACJMsEAAAAAAAAMIkCwQAAAAAAIAwyQIBAAAA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AIlTkABAsGSBMWSBAAAETusNAEicggQAgiULjCELBAAgcFpvAEDiFCQAECxZYAxZIAAAgdN6AwASpyABgGDJAmPIAgEACJzWGwCQOAUJAARLFhhDFggAQOC03gCAxClIACBYssAYskAAAAKn9QYAJE5BAgDBkgXGkAUCABA4rTcAIHEKEgAIliwwhiwQAIDAab0BAIlTkABAsGSBMWSBAAAETusNAEicggQAgiULjCELBAAgcFpvAEDiFCQAECxZYAxZIAAAgdN6AwASpyABgGDJAmPIAgEACJzWGwCQOAUJAARLFhhDFggAQOC03gCAxClIACBYWc4Cb7zxxs8u2datW4sAABCwQqGQ9CEAAHmnIAGAYO3Zsyc2U0trFggAAHngz/ABgMQpSAAg1XyQAwBAuLTeAIDEKUgAINV8kAMAQLi03gCAxClIACDVfJADAEC4tN4AgMQpSAAg1XyQAwBAuLTeAIDEKUgAINV8kAMAQLi03gCAxClIACDVUvZBftttt312yXbs2FEEAIA0KBQKSR8CAJB3ChIASIu77767N1xLWRb42c9+duk7id6Lpe8EAACGwJ/hAwCJU5AAQFr0jcBS9kEuCwQAIFe03gCAxClIACAtZIFtskAAANJC6w0ASJyCBADSQhbYJgsEACAttN4AgMQpSAAgLWSBbbJAAADSQusNAEicggQA0kIW2CYLBAAgLbTeAIDEKUgAIC1kgW2yQAAA0kLrDQBInIIEANJCFtgmCwQAIC203gCAxClIACAtZIFtskAAANJC6w0ASJyCBADSQhbYJgsEACAttN4AgMQpSAAgLWSBbbJAAADSQusNAEicggQA0kIW2CYLBAAgLbTeAIDEKUgAIC1kgW2yQAAA0kLrDQBInIIEANJCFtgmCwQAIC203gCAxClIACAtZIFtskAAANJC6w0ASJyCBADSQhbYJgsEACAttN4AgMQpSAAgLWSBbbJAAADSQusNAEicggQA0kIW2CYLBAAgLbTeAIDEKUgAIC1kgW2yQAAA0kLrDQBInIIEANJCFtgmCwQAIC203gCAxClIACAtZIFtskAAANJC6w0ASJyCBADSQhbYJgsEACAttN4AgMQpSAAgLWSBbbJAAADSQusNAEicggQA0kIW2CYLBAAgLbTeAIDEKUgAIC1kgW2yQAAA0kLrDQBInIIEANJCFtgmCwQAIC203gCAxClIACAtZIFtskAAANJC6w0ASJyCBADSQhbYJgsEACAttN4AgMQpSAAgLWSBbbJAAADSQusNAEicggQA0kIW2CYLBAAgLbTeAIDEKUgAIC1kgW2yQAAA0kLrDQBInIIEANJCFtgmCwQAIC203gCAxClIACAtZIFtskAAANJC6w0ASJyCBADSQhbYJgsEACAttN4AgMQpSAAgLWSBbbJAAADSQusNAEicggQA0kIW2CYLBAAgLbTeAIDEKUgAIC1kgW2yQAAA0kLrDQBInIIEANJCFtgmCwQAIC203gCAxClIACAtZIFtskAAANJC6w0ASJyCBADSQhbYJgsEACAttN4AgMQpSAAgLWSBbbJAAADSQusNAEicggQA0kIW2CYLBAAgLbTeAIDEKUgAIC1kgW2yQAAA0kLrDQBInIIEANJCFtgmCwQAIC203gCAxClIACAtZIFtskAAANJC6w0ASJyCBADSQhbYJgsEACAttN4AgMQpSAAgLWSBbbJAAABC9q53vavQz7p165I+NAAgLxQkAJBGssA2WSAAACH75Cc/2dt3+9znPnfttdcmfWgAQF4oSAAgjWSBbbJAAABCNj4+/s53vrO773bWWWd9+MMfPnz4cNKHBgDkhYIEANJIFtgmCwQAIHAf+tCHultvn/nMZ8zHBQAMmYIEAFJHFtgmCwQAIHA//elPu/8Sf8OGDfv27Uv6oACAfFGQAEDqyALbZIEAAITvfe97X6fvds455yR9OABAHilIACBdZIFtskAAAMI3OjramY9r7969SR8OAJBHChIASBdZYJssEACAVDjrrLMKhcKqVasmJyeTPhYAIKcUJACQIrLANlkgAACpsHPnzkKhsGPHjqQPBADILwUJAKSILLBNFggAQCpMTk6+4x3vGB8fT/pAAID8UpAAQIrIAttkgQAAAAAAAGSMLLBNFggAAAAAAEDGyALbZIEAAHl28uTL3xn9zo1bv/DRj3zsA+eef+7Z5xlLGZdefNnVH//EV+/46mOPPpb0tQWA1FCQKEgAYCXIAttkgQAA+TR+YvzL27/8R+ev+fSfffrub9196NCh48ePv/bqa8aix8mXTj799DMP7Hvgtr+8be1Fl17ziU898cQTSV9nAAiagkRBAgArRxbYJgsEAMihH/3wx5dcuPbmm245duxYZ+WZM2fefOv0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</png>
+  </Graphics>
+  
+<validation valid="false">
+		<error actionID="5" parameterName="file_name">Data Object action "Antrag Exmatrikulation" is missing required parameter "file_name".</error>
+		<error actionID="17" parameterName="file_name">Data Object action "Exmatrikulationsbescheinigung" is missing required parameter "file_name".</error>
+		<error actionID="18" parameterName="file_name">Data Object action "Exmatrikulationsbescheinigung" is missing required parameter "file_name".</error>
+		<error actionID="19" parameterName="file_name">Data Object action "Exmatrikulationsbescheinigung" is missing required parameter "file_name".</error>
+		<error actionID="20" parameterName="file_name">Data Object action "Notenbescheinigung" is missing required parameter "file_name".</error>
+		<error actionID="21" parameterName="file_name">Data Object action "Notenbescheinigung" is missing required parameter "file_name".</error>
+		<error actionID="1" parameterName="workflow">Activity action "Antrag auf Exmatrikulation formal prüfen" is missing required parameter "workflow".</error>
+		<error actionID="1" parameterName="workflow">Activity action "Antrag auf Exmatrikulation formal prüfen" has wrong definition document type.</error>
+		<error actionID="2" parameterName="workflow">Activity action "Sperre setzen "Ex in Bearbeitung"" is missing required parameter "workflow".</error>
+		<error actionID="2" parameterName="workflow">Activity action "Sperre setzen "Ex in Bearbeitung"" has wrong definition document type.</error>
+		<error actionID="3" parameterName="workflow">Activity action "Auf offene Prüfungsverfahren prüfen" is missing required parameter "workflow".</error>
+		<error actionID="3" parameterName="workflow">Activity action "Auf offene Prüfungsverfahren prüfen" has wrong definition document type.</error>
+		<error actionID="4" parameterName="workflow">Activity action "ggf. Entscheidung über Beendigung Prüfungsverfahren treffen" is missing required parameter "workflow".</error>
+		<error actionID="4" parameterName="workflow">Activity action "ggf. Entscheidung über Beendigung Prüfungsverfahren treffen" has wrong definition document type.</error>
+		<error actionID="6" parameterName="workflow">Activity action "Bescheid "Exmatrikulation auf Antrag erstellen"" is missing required parameter "workflow".</error>
+		<error actionID="6" parameterName="workflow">Activity action "Bescheid "Exmatrikulation auf Antrag erstellen"" has wrong definition document type.</error>
+		<error actionID="7" parameterName="workflow">Activity action "Bescheinigung zur Vorlage bei der Ausbildungsstätte ggf. unterzeichnen" is missing required parameter "workflow".</error>
+		<error actionID="7" parameterName="workflow">Activity action "Bescheinigung zur Vorlage bei der Ausbildungsstätte ggf. unterzeichnen" has wrong definition document type.</error>
+		<error actionID="8" parameterName="workflow">Activity action "Exmatrikulationsbescheid unterzeichnen" is missing required parameter "workflow".</error>
+		<error actionID="8" parameterName="workflow">Activity action "Exmatrikulationsbescheid unterzeichnen" has wrong definition document type.</error>
+		<error actionID="9" parameterName="workflow">Activity action "Exmatrikulationsbescheid und Bescheinigung zur Vorlage bei der Ausbildungsstätte an Studierenden versenden" is missing required parameter "workflow".</error>
+		<error actionID="9" parameterName="workflow">Activity action "Exmatrikulationsbescheid und Bescheinigung zur Vorlage bei der Ausbildungsstätte an Studierenden versenden" has wrong definition document type.</error>
+		<error actionID="10" parameterName="workflow">Activity action "Beendigung offener Prüfungsverfahren" is missing required parameter "workflow".</error>
+		<error actionID="10" parameterName="workflow">Activity action "Beendigung offener Prüfungsverfahren" has wrong definition document type.</error>
+		<error actionID="12" parameterName="workflow">Activity action "Abschließende Notenbescheinigung erstellen" is missing required parameter "workflow".</error>
+		<error actionID="12" parameterName="workflow">Activity action "Abschließende Notenbescheinigung erstellen" has wrong definition document type.</error>
+		<error actionID="13" parameterName="workflow">Activity action "Notenbescheinigung unterzeichnen" is missing required parameter "workflow".</error>
+		<error actionID="13" parameterName="workflow">Activity action "Notenbescheinigung unterzeichnen" has wrong definition document type.</error>
+		<error actionID="14" parameterName="workflow">Activity action "Vollständige Entlastung überprüfen" is missing required parameter "workflow".</error>
+		<error actionID="14" parameterName="workflow">Activity action "Vollständige Entlastung überprüfen" has wrong definition document type.</error>
+		<error actionID="15" parameterName="workflow">Activity action "Notenbescheinigung und Exmatrikulationsbescheinigung versenden" is missing required parameter "workflow".</error>
+		<error actionID="15" parameterName="workflow">Activity action "Notenbescheinigung und Exmatrikulationsbescheinigung versenden" has wrong definition document type.</error>
+</validation></Workflow>
