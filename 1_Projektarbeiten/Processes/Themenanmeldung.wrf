@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Workflow in_service="true" stopOnError="true" stop="true" instance="0" created="19. 6. 2017 11:10:10" createdby="NEU PC" lastupdate="26. 6. 2017 11:59:20" lastupdateby="pata1" engine="5.170413.132715" wsdl="" testpage="" iconsize="32" owner="" version="1498471160076" processTitle="Themenanmeldung" showProcessTitle="true">
+<Workflow in_service="true" stopOnError="true" stop="true" instance="0" created="19. 6. 2017 11:10:10" createdby="NEU PC" lastupdate="3. 7. 2017 14:07:41" lastupdateby="NEU PC" engine="5.170322.142320.mk_WelcomePageDeeplink" wsdl="" testpage="" iconsize="32" owner="" version="1499083661535" processTitle="Themenanmeldung" showProcessTitle="true">
   <Metadata/>
   <ProcessDescription/>
   <SchemaDeclaration/>
   <Comment/>
-  <CustomPlaceholders maxAge="-1"/>
   <Transitions>
     <Transition SVGid="Element1011" id="1">
       <From action="0"/>
@@ -28,7 +27,7 @@
       <Parameters>
         <Parameter id="1">
           <name>workflow</name>
-          <value>1_Projektarbeiten/Processes/subprocesses/Thema_und_Expose_in_Datenbank_eintragen.wrf</value>
+          <value>1_Projektabeiten/Processes/subprocesses/Thema_und_Expose_in_Datenbank_eintragen.wrf</value>
         </Parameter>
       </Parameters>
     </Action>
@@ -40,7 +39,7 @@
       <Parameters>
         <Parameter id="1">
           <name>workflow</name>
-          <value>1_Projektarbeiten/Processes/subprocesses/Formular_AnmeldungEinerProjektarbeit_hochladen.wrf</value>
+          <value>1_Projektabeiten/Processes/subprocesses/Formular_AnmeldungEinerProjektarbeit_hochladen.wrf</value>
         </Parameter>
       </Parameters>
     </Action>
@@ -52,7 +51,7 @@
     <Recurrence/>
   </Scheduler>
   <Graphics>
-    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="943" height="599">
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="990" height="424">
       <defs>
         <marker id="Triangle" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="strokeWidth" markerWidth="4" markerHeight="3" orient="auto">
           <path d="M 0 0 L 10 5 L 0 10 z"/>
