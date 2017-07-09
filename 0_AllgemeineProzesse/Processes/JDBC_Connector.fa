@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FunctionAdapter code="de.softproject.integration.adapter.jdbc.DB" iXname="JDBC Connector" description="Connects to a JDBC database using a JNDI name and executes one or multiple database statements handed over as input XML document with an adapter-specific structure." user_comment=""><actions>
+			<action>
+				<name>execute</name>
+				<value>execute</value>
+			</action>
+		</actions><states/><Parameter name="Adapter" value="de.softproject.integration.adapter.jdbc.DB" user_comment=""/><Parameter name="JndiName" value="java:/X4BAM_DS" user_comment=""/><Parameter name="CommitMode" value="AUTO" user_comment=""/><Parameter name="AddMetaDataForQueries" value="false" user_comment=""/><Parameter name="ColumnCase" value="NO_CHANGE" user_comment=""/></FunctionAdapter>
